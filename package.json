@@ -1,5 +1,5 @@
 {
-  "name": "ameliya-global",
+  "name": "ameliya-visa",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,25 +10,25 @@
   },
   "dependencies": {
     "@kinde-oss/kinde-auth-nextjs": "^2.11.0",
-    "@prisma/client": "^5.22.0",
-    "@tanstack/react-query": "^5.95.2",
-    "@uploadthing/react": "^7.3.3",
+    "@prisma/adapter-pg": "^7.6.0",
+    "@prisma/client": "^7.6.0",
     "framer-motion": "^12.38.0",
     "next": "16.2.1",
-    "prisma": "^5.22.0",
+    "nodemailer": "^8.0.4",
+    "pg": "^8.20.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "resend": "^6.9.4",
-    "uploadthing": "^7.7.4",
-    "zod": "^4.3.6"
+    "resend": "^6.9.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.20.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
+    "prisma": "^7.6.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

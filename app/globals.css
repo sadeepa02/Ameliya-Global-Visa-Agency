@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Keep font variables local to avoid network fetch during build */
+  --font-geist-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-geist-mono: "SFMono-Regular", "Menlo", "Consolas", monospace;
 }
 
 @theme inline {

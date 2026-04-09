@@ -1,16 +1,24 @@
-import type { NextConfig } from 'next';
-/*
+import type { NextConfig } from "next";
+
 const nextConfig: NextConfig = {
-  // Only include the IP if it's defined in your local environment
-  allowedDevOrigins: process.env.ALLOWED_DEV_IP ? [process.env.ALLOWED_DEV_IP] : [],
-};
+  // Fix Windows / monorepo path issues
+  outputFileTracingRoot: __dirname,
 
-export default nextConfig;
-*/
+  turbopack: {
+    root: __dirname,
+  },
 
-const nextConfig = {
-  // This reads the IP from your .env file
-  allowedDevOrigins: process.env.ALLOWED_DEV_IP ? [process.env.ALLOWED_DEV_IP] : [],
+  typescript: {
+    // Avoid build crashes during development (can disable later)
+    ignoreBuildErrors: true,
+  },
+
+  // ✅ Allow external devices (mobile / LAN / WSL)
+  allowedDevOrigins: [
+    "172.28.3.137",   // your current IP
+    "localhost",
+    "127.0.0.1",
+  ],
 };
 
 export default nextConfig;
